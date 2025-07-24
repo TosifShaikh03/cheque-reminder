@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheque Reminder</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cheque Reminder</h1>
+    <div id="auth-section">
+      <h2 id="form-title">Login</h2>
+      <form id="auth-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="username" placeholder="Username" style="display: none;">
+        <button type="submit" id="auth-button">Login</button>
+      </form>
+      <p id="toggle-auth">Don't have an account? <a href="#" id="toggle-link">Sign Up</a></p>
+    </div>
+    <div id="cheque-section" style="display: none;">
+      <h2>Add Cheque</h2>
+      <form id="cheque-form">
+        <input type="text" id="cheque-number" placeholder="Cheque Number" required>
+        <input type="date" id="cheque-date" required>
+        <input type="number" id="cheque-amount" placeholder="Amount" required>
+        <input type="text" id="cheque-bank" placeholder="Bank Name" required>
+        <button type="submit">Add Cheque</button>
+      </form>
+      <h2>Your Cheques</h2>
+      <ul id="cheque-list"></ul>
+      <button id="logout-button">Logout</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

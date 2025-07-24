@@ -1,0 +1,16 @@
+{
+  "name": "cheque-reminder",
+  "version": "1.0.0",
+  "description": "A web app to manage cheque reminders",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.1",
+    "firebase-admin": "^12.6.0"
+  }
+}
